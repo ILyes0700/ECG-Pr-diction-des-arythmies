@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Squelette IEEE — inserez les tables generees dans results/tables/*.tex
+% Compilation : pdflatex main && bibtex main && pdflatex main && pdflatex main
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[journal]{IEEEtran}
+\usepackage{graphicx,amsmath,booktabs,siunitx,url,multirow}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{Interpretable and Well-Calibrated Inter-Patient ECG Arrhythmia
+Classification with Rhythm-Aware Deep Learning and Clinical Utility Assessment}
+
+\author{Ilyes Rejeb,~\IEEEmembership{}
+\thanks{Manuscript submitted \today. Code and trained models:
+\url{https://github.com/<user>/ecg-arrhythmia-paper} (archived on Zenodo, DOI: 10.5281/zenodo.XXXXXXX).}}
+
+\maketitle
+
+\begin{abstract}
+Automatic beat-wise arrhythmia classification is usually reported under an intra-patient
+protocol, which leaks patient-specific information into the test set and yields optimistic
+accuracies above 99\,\%. We present a rhythm-aware deep model evaluated strictly under the
+inter-patient AAMI EC57 protocol on the MIT-BIH Arrhythmia Database (DS1/DS2 division, paced
+records excluded). The network combines a multi-scale residual convolutional stem with
+squeeze-and-excitation recalibration, a bidirectional GRU, multi-head self-attention, and a
+late-fusion branch encoding six RR-interval descriptors. Training uses a class-weighted focal
+loss; no resampling is applied to validation or test data. Beyond conventional metrics we report
+a complete clinical assessment: sensitivity, positive predictive value, likelihood ratios,
+diagnostic odds ratio, Matthews correlation, prevalence-adjusted predictive values, EC57 gross
+and average statistics, false-alarm burden per hour, episode-level detection, decision-curve net
+benefit, expected clinical cost, probability calibration, and a selective-prediction reject
+option. On DS2 the proposed model reaches XX.X\,\% accuracy, a macro F1 of 0.XXX
+(95\,\% CI [0.XXX, 0.XXX], patient-level bootstrap), VEB sensitivity of XX.X\,\% and SVEB
+sensitivity of XX.X\,\%, with an expected calibration error of 0.0XX and fewer than X false
+ventricular alarms per hour. Ablations, McNemar tests and external validation on INCART confirm
+that the rhythm branch and the beat-context input drive the improvement.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Electrocardiography, arrhythmia classification, inter-patient evaluation, AAMI EC57,
+calibration, clinical decision support, explainable AI.
+\end{IEEEkeywords}
+
+\section{Introduction}
+% 1) enjeu clinique  2) limites de l'etat de l'art (intra-patient, accuracy trompeuse,
+% absence de metriques cliniques)  3) contributions
+Our contributions are: (i) a rhythm-aware architecture fusing morphology, beat context and RR
+descriptors; (ii) a strictly leakage-free inter-patient protocol with patient-level statistics;
+(iii) a clinical evaluation layer (likelihood ratios, alarm burden, episode analysis, net
+benefit, calibration, reject option) rarely reported in the ECG literature; (iv) a fully
+reproducible open-source pipeline validated on an external database.
+
+\section{Related Work}
+% Tableau comparatif : methode / protocole / Se_S / Se_V. Insister sur intra vs inter-patient.
+\input{../results/tables/table13_etat_de_l_art.tex}
+
+\section{Materials and Methods}
+\subsection{Database and AAMI labelling}
+\input{../results/tables/table01_dataset.tex}
+
+\subsection{Signal preprocessing}
+% 0.5-40 Hz zero-phase Butterworth, median-filter baseline removal, asymmetric window
+% (-250 ms / +306 ms), resampling to 128 samples, per-beat z-score.
+
+\subsection{Rhythm descriptors and beat context}
+% 6 RR features + previous/current/next beat as 3 input channels.
+
+\subsection{Network architecture}
+\begin{figure}[t]\centering
+\includegraphics[width=\columnwidth]{figures/architecture.pdf}
+\caption{Proposed MS-Res-SE-BiGRU-Attention network with late RR fusion.}
+\label{fig:arch}\end{figure}
+
+\subsection{Loss and class imbalance}
+\subsection{Evaluation protocol}
+% DS1 -> train (17 patients) + validation (5 patients); DS2 -> test (22 patients).
+% Optional AAMI patient adaptation on the first 5 minutes of each DS2 record, excluded from test.
+
+\subsection{Clinical metrics}
+% Se, Sp, PPV, NPV, LR+, LR-, DOR, Youden J, MCC, NND, prevalence-adjusted PPV/NPV,
+% EC57 gross/average, false alarms per hour, episode sensitivity and latency,
+% decision-curve net benefit, expected clinical cost, ECE/MCE/Brier, coverage-risk.
+
+\section{Results}
+\input{../results/tables/table02_comparaison.tex}
+\input{../results/tables/table03_metriques_cliniques.tex}
+\input{../results/tables/table04_prevalence.tex}
+\input{../results/tables/table05_ec57.tex}
+\input{../results/tables/table06_alarmes.tex}
+\input{../results/tables/table09_point_de_fonctionnement.tex}
+\input{../results/tables/table11_ablation.tex}
+\input{../results/tables/table12_significativite.tex}
+
+\begin{figure}[t]\centering
+\includegraphics[width=\columnwidth]{../results/figures/fig04_confusion.png}
+\caption{Confusion matrix on DS2 (inter-patient).}\label{fig:cm}\end{figure}
+
+\begin{figure}[t]\centering
+\includegraphics[width=\columnwidth]{../results/figures/fig07_calibration.png}
+\caption{Reliability diagrams before and after temperature scaling.}\label{fig:cal}\end{figure}
+
+\begin{figure}[t]\centering
+\includegraphics[width=\columnwidth]{../results/figures/fig08_decision_curve.png}
+\caption{Decision-curve analysis for ventricular beat detection.}\label{fig:dca}\end{figure}
+
+\section{Discussion}
+% Comparaison a l'etat de l'art inter-patient, erreurs residuelles S vs N et F vs V,
+% implications pour le monitoring, limites (derivation unique, base ancienne, annotations).
+
+\section{Conclusion}
+
+\section*{Data and Code Availability}
+MIT-BIH and INCART are public (PhysioNet). All code, configurations and trained weights are
+released under the MIT licence.
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+\end{document}

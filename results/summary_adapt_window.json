@@ -1,0 +1,267 @@
+{
+  "table12h": [
+    {
+      "Relation": "S : effectif dans la fenetre vs gain de Se_S",
+      "rho_Spearman": 0.088,
+      "p_permutation": 0.4497,
+      "n_couples": 75
+    },
+    {
+      "Relation": "    dont PROPOSED",
+      "rho_Spearman": 0.271,
+      "p_permutation": 0.3319,
+      "n_couples": 15
+    },
+    {
+      "Relation": "    dont CNN1D",
+      "rho_Spearman": 0.083,
+      "p_permutation": 0.7789,
+      "n_couples": 15
+    },
+    {
+      "Relation": "    dont ResNet1D",
+      "rho_Spearman": 0.099,
+      "p_permutation": 0.7404,
+      "n_couples": 15
+    },
+    {
+      "Relation": "    dont CNN_BiLSTM",
+      "rho_Spearman": 0.104,
+      "p_permutation": 0.7085,
+      "n_couples": 15
+    },
+    {
+      "Relation": "    dont BiLSTM",
+      "rho_Spearman": -0.139,
+      "p_permutation": 0.6184,
+      "n_couples": 15
+    },
+    {
+      "Relation": "S : proportion dans la fenetre vs gain de Se_S",
+      "rho_Spearman": 0.087,
+      "p_permutation": 0.4536,
+      "n_couples": 75
+    },
+    {
+      "Relation": "    dont PROPOSED",
+      "rho_Spearman": 0.303,
+      "p_permutation": 0.2735,
+      "n_couples": 15
+    },
+    {
+      "Relation": "    dont CNN1D",
+      "rho_Spearman": 0.073,
+      "p_permutation": 0.8003,
+      "n_couples": 15
+    },
+    {
+      "Relation": "    dont ResNet1D",
+      "rho_Spearman": 0.074,
+      "p_permutation": 0.8015,
+      "n_couples": 15
+    },
+    {
+      "Relation": "    dont CNN_BiLSTM",
+      "rho_Spearman": 0.102,
+      "p_permutation": 0.7137,
+      "n_couples": 15
+    },
+    {
+      "Relation": "    dont BiLSTM",
+      "rho_Spearman": -0.139,
+      "p_permutation": 0.6189,
+      "n_couples": 15
+    },
+    {
+      "Relation": "V : effectif dans la fenetre vs gain de Se_V",
+      "rho_Spearman": 0.495,
+      "p_permutation": 0.0,
+      "n_couples": 75
+    },
+    {
+      "Relation": "    dont PROPOSED",
+      "rho_Spearman": 0.535,
+      "p_permutation": 0.0418,
+      "n_couples": 15
+    },
+    {
+      "Relation": "    dont CNN1D",
+      "rho_Spearman": 0.389,
+      "p_permutation": 0.1496,
+      "n_couples": 15
+    },
+    {
+      "Relation": "    dont ResNet1D",
+      "rho_Spearman": 0.479,
+      "p_permutation": 0.0713,
+      "n_couples": 15
+    },
+    {
+      "Relation": "    dont CNN_BiLSTM",
+      "rho_Spearman": 0.64,
+      "p_permutation": 0.012,
+      "n_couples": 15
+    },
+    {
+      "Relation": "    dont BiLSTM",
+      "rho_Spearman": 0.464,
+      "p_permutation": 0.081,
+      "n_couples": 15
+    }
+  ],
+  "table12i": [
+    {
+      "Architecture": "PROPOSED",
+      "Se_S_sans_adapt": 0.1057,
+      "Se_S_avec_adapt": 0.7923,
+      "Delta_complet": 0.6866,
+      "patient_le_plus_influent": "232",
+      "Delta_sans_ce_patient": -0.0476,
+      "Se_S_sans_ce_patient_sans_adapt": 0.3855,
+      "Se_S_sans_ce_patient_avec_adapt": 0.3379,
+      "chute_du_Delta": 0.7342
+    },
+    {
+      "Architecture": "CNN1D",
+      "Se_S_sans_adapt": 0.0491,
+      "Se_S_avec_adapt": 0.7177,
+      "Delta_complet": 0.6685,
+      "patient_le_plus_influent": "232",
+      "Delta_sans_ce_patient": -0.0952,
+      "Se_S_sans_ce_patient_sans_adapt": 0.1247,
+      "Se_S_sans_ce_patient_avec_adapt": 0.0295,
+      "chute_du_Delta": 0.7638
+    },
+    {
+      "Architecture": "ResNet1D",
+      "Se_S_sans_adapt": 0.0896,
+      "Se_S_avec_adapt": 0.7307,
+      "Delta_complet": 0.6412,
+      "patient_le_plus_influent": "232",
+      "Delta_sans_ce_patient": -0.2336,
+      "Se_S_sans_ce_patient_sans_adapt": 0.2971,
+      "Se_S_sans_ce_patient_avec_adapt": 0.0635,
+      "chute_du_Delta": 0.8747
+    },
+    {
+      "Architecture": "CNN_BiLSTM",
+      "Se_S_sans_adapt": 0.0168,
+      "Se_S_avec_adapt": 0.584,
+      "Delta_complet": 0.5672,
+      "patient_le_plus_influent": "232",
+      "Delta_sans_ce_patient": -0.0363,
+      "Se_S_sans_ce_patient_sans_adapt": 0.0363,
+      "Se_S_sans_ce_patient_avec_adapt": 0.0,
+      "chute_du_Delta": 0.6034
+    },
+    {
+      "Architecture": "BiLSTM",
+      "Se_S_sans_adapt": 0.033,
+      "Se_S_avec_adapt": 0.1039,
+      "Delta_complet": 0.0709,
+      "patient_le_plus_influent": "232",
+      "Delta_sans_ce_patient": -0.1156,
+      "Se_S_sans_ce_patient_sans_adapt": 0.1156,
+      "Se_S_sans_ce_patient_avec_adapt": 0.0,
+      "chute_du_Delta": 0.1865
+    }
+  ],
+  "table12j": [
+    {
+      "Bras": "PROPOSED+adapt",
+      "F1_gross": 0.8812,
+      "F1_average_22pat": 0.7451,
+      "F1_average_11pat": 0.6047,
+      "Cout_average_22pat": 0.0539
+    },
+    {
+      "Bras": "PROPOSED-adapt",
+      "F1_gross": 0.5057,
+      "F1_average_22pat": 0.6784,
+      "F1_average_11pat": 0.6161,
+      "Cout_average_22pat": 0.2585
+    },
+    {
+      "Bras": "CNN1D+adapt",
+      "F1_gross": 0.8647,
+      "F1_average_22pat": 0.6576,
+      "F1_average_11pat": 0.5643,
+      "Cout_average_22pat": 0.0808
+    },
+    {
+      "Bras": "CNN1D-adapt",
+      "F1_gross": 0.4771,
+      "F1_average_22pat": 0.6037,
+      "F1_average_11pat": 0.537,
+      "Cout_average_22pat": 0.2964
+    },
+    {
+      "Bras": "ResNet1D+adapt",
+      "F1_gross": 0.8496,
+      "F1_average_22pat": 0.6775,
+      "F1_average_11pat": 0.5761,
+      "Cout_average_22pat": 0.0732
+    },
+    {
+      "Bras": "ResNet1D-adapt",
+      "F1_gross": 0.4786,
+      "F1_average_22pat": 0.6063,
+      "F1_average_11pat": 0.5398,
+      "Cout_average_22pat": 0.3069
+    },
+    {
+      "Bras": "CNN_BiLSTM+adapt",
+      "F1_gross": 0.8275,
+      "F1_average_22pat": 0.6405,
+      "F1_average_11pat": 0.5596,
+      "Cout_average_22pat": 0.1235
+    },
+    {
+      "Bras": "CNN_BiLSTM-adapt",
+      "F1_gross": 0.4389,
+      "F1_average_22pat": 0.6073,
+      "F1_average_11pat": 0.5226,
+      "Cout_average_22pat": 0.3512
+    },
+    {
+      "Bras": "BiLSTM+adapt",
+      "F1_gross": 0.5138,
+      "F1_average_22pat": 0.6079,
+      "F1_average_11pat": 0.5412,
+      "Cout_average_22pat": 0.2559
+    },
+    {
+      "Bras": "BiLSTM-adapt",
+      "F1_gross": 0.4277,
+      "F1_average_22pat": 0.6048,
+      "F1_average_11pat": 0.522,
+      "Cout_average_22pat": 0.3775
+    }
+  ],
+  "patients_3classes": [
+    "100",
+    "121",
+    "200",
+    "202",
+    "210",
+    "213",
+    "214",
+    "219",
+    "228",
+    "233",
+    "234"
+  ],
+  "patients_degeneres": [
+    "103",
+    "105",
+    "111",
+    "113",
+    "117",
+    "123",
+    "212",
+    "221",
+    "222",
+    "231",
+    "232"
+  ]
+}

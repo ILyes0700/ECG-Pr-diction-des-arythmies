@@ -1,0 +1,15 @@
+\begin{table}
+\caption{Complexite et latence.}
+\label{tab:complexity}
+\begin{tabular}{lrrrrr}
+\toprule
+Model & Params & Latence_ms & F1_macro & Taille_Mo & Battements_par_seconde \\
+\midrule
+BiLSTM & 78372 & 0.0580 & 0.4204 & 0.3135 & 17229.4969 \\
+CNN1D & 101572 & 0.0311 & 0.4874 & 0.4063 & 32133.6761 \\
+CNN_BiLSTM & 149828 & 0.0315 & 0.4605 & 0.5993 & 31766.2008 \\
+PROPOSED & 500813 & 0.0991 & 0.8087 & 2.0033 & 10086.7460 \\
+ResNet1D & 348356 & 0.0454 & 0.4500 & 1.3934 & 22007.0423 \\
+\bottomrule
+\end{tabular}
+\end{table}

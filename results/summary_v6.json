@@ -1,0 +1,132 @@
+{
+  "calibration_par_modele": [
+    {
+      "methode": "vector_scaling",
+      "w": [
+        2.7463,
+        1.5592,
+        2.503,
+        2.7515
+      ],
+      "b": [
+        1.5993,
+        -1.7303,
+        0.6865,
+        -1.485
+      ],
+      "nll_validation": 0.2043,
+      "nll_sans_calibration": 0.71403,
+      "nll_temperature": 0.43604,
+      "nll_vector": 0.2043,
+      "temperature": 0.5,
+      "modele": "CNN1D"
+    },
+    {
+      "methode": "vector_scaling",
+      "w": [
+        3.9525,
+        3.8184,
+        1.9993,
+        3.036
+      ],
+      "b": [
+        1.1861,
+        1.3485,
+        -1.4904,
+        -2.3976
+      ],
+      "nll_validation": 0.22298,
+      "nll_sans_calibration": 0.67522,
+      "nll_temperature": 0.35849,
+      "nll_vector": 0.22298,
+      "temperature": 0.5,
+      "modele": "BiLSTM"
+    },
+    {
+      "methode": "vector_scaling",
+      "w": [
+        2.2686,
+        1.7614,
+        2.0004,
+        2.6314
+      ],
+      "b": [
+        1.4956,
+        -0.7253,
+        0.113,
+        -1.9758
+      ],
+      "nll_validation": 0.22232,
+      "nll_sans_calibration": 0.69065,
+      "nll_temperature": 0.39995,
+      "nll_vector": 0.22232,
+      "temperature": 0.5,
+      "modele": "CNN_BiLSTM"
+    },
+    {
+      "methode": "vector_scaling",
+      "w": [
+        4.1039,
+        2.9009,
+        2.3458,
+        3.0529
+      ],
+      "b": [
+        2.1658,
+        -1.4653,
+        -1.2677,
+        -2.1112
+      ],
+      "nll_validation": 0.18608,
+      "nll_sans_calibration": 0.81238,
+      "nll_temperature": 0.55058,
+      "nll_vector": 0.18608,
+      "temperature": 0.5,
+      "modele": "ResNet1D"
+    },
+    {
+      "methode": "vector_scaling",
+      "w": [
+        1.6997,
+        2.2851,
+        2.8637,
+        3.0759
+      ],
+      "b": [
+        0.8194,
+        -0.8669,
+        1.6929,
+        -1.4659
+      ],
+      "nll_validation": 0.16768,
+      "nll_sans_calibration": 0.69779,
+      "nll_temperature": 0.39536,
+      "nll_vector": 0.16768,
+      "temperature": 0.5,
+      "modele": "PROPOSED"
+    }
+  ],
+  "seuils_S": {
+    "seuil_S_F1": 0.13994077644718678,
+    "seuil_S_cout": 0.09717543859649123,
+    "seuil_S_se85": 0.02595125138759613,
+    "seuil_S_F1macro": 0.13994077644718678
+  },
+  "regle_alarme": {
+    "k": 3,
+    "n": 8,
+    "refractaire_s": 120.0,
+    "seuil_V": null,
+    "test_FA_par_heure": 1.6303253941630322,
+    "test_Se_alarme": 0.9090909090909091,
+    "test_VPP_alarme": 0.8
+  },
+  "seeds": [
+    42,
+    1337,
+    2024,
+    7,
+    99
+  ],
+  "note": "Tous les seuils et la regle d'alarme sont choisis sur la VALIDATION et appliques une seule fois au test."
+}

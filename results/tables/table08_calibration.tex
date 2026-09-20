@@ -1,0 +1,13 @@
+\begin{table}
+\caption{Calibration probabiliste : la methode est choisie sur la validation, jamais sur le test.}
+\label{tab:calibration}
+\begin{tabular}{llrrrr}
+\toprule
+Etat & Methode & ECE & MCE & Brier & NLL_validation \\
+\midrule
+sans calibration & - & 0.4173 & 0.4516 & 0.3100 & 0.6978 \\
+temperature scaling & T=0.50 & 0.1902 & 0.2187 & 0.1138 & 0.3954 \\
+retenue (NLL validation) & vector_scaling & 0.0147 & 0.1938 & 0.0308 & 0.1677 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,4 @@
+Regle,Heures,Alarmes_reference,Alarmes_emises,Vraies_alarmes,Fausses_alarmes,Manquees,FA_par_heure,Se_alarme,VPP_alarme
+"origine : argmax, 3-sur-10, 60 s",9.200617283950619,113,133,109,24,4,2.6085206306608515,0.9646017699115044,0.8195488721804511
+"point de fonctionnement retenu, regle d'origine",9.200617283950619,113,128,109,19,4,2.0650788326065075,0.9646017699115044,0.8515625
+"retenue : 3-sur-8, 120 s, seuil V aucun",9.200617283950619,66,75,60,15,6,1.6303253941630322,0.9090909090909091,0.8

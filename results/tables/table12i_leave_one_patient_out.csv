@@ -1,0 +1,6 @@
+Architecture,Se_S_sans_adapt,Se_S_avec_adapt,Delta_complet,patient_le_plus_influent,Delta_sans_ce_patient,Se_S_sans_ce_patient_sans_adapt,Se_S_sans_ce_patient_avec_adapt,chute_du_Delta
+PROPOSED,0.1057,0.7923,0.6866,232,-0.0476,0.3855,0.3379,0.7342
+CNN1D,0.0491,0.7177,0.6685,232,-0.0952,0.1247,0.0295,0.7638
+ResNet1D,0.0896,0.7307,0.6412,232,-0.2336,0.2971,0.0635,0.8747
+CNN_BiLSTM,0.0168,0.584,0.5672,232,-0.0363,0.0363,0.0,0.6034
+BiLSTM,0.033,0.1039,0.0709,232,-0.1156,0.1156,0.0,0.1865

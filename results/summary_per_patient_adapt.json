@@ -1,0 +1,40 @@
+{
+  "table18a": [
+    {
+      "Bras": "aucune adaptation",
+      "F1_gross": 0.5057,
+      "F1_average": 0.6784,
+      "Se_S_gross": 0.1057,
+      "Se_S_average": 0.2795,
+      "Se_V_gross": 0.9617,
+      "Se_V_average": 0.9304,
+      "Cout_gross": 0.2386,
+      "Cout_average": 0.2585,
+      "Accuracy": 0.9398
+    },
+    {
+      "Bras": "adaptation groupee",
+      "F1_gross": 0.8812,
+      "F1_average": 0.7451,
+      "Se_S_gross": 0.7923,
+      "Se_S_average": 0.3028,
+      "Se_V_gross": 0.9892,
+      "Se_V_average": 0.9915,
+      "Cout_gross": 0.0604,
+      "Cout_average": 0.0539,
+      "Accuracy": 0.9807
+    },
+    {
+      "Bras": "adaptation par patient",
+      "F1_gross": 0.8251,
+      "F1_average": 0.7617,
+      "Se_S_gross": 0.76,
+      "Se_S_average": 0.3854,
+      "Se_V_gross": 0.9818,
+      "Se_V_average": 0.9836,
+      "Cout_gross": 0.0777,
+      "Cout_average": 0.0687,
+      "Accuracy": 0.9685
+    }
+  ]
+}

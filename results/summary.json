@@ -1,0 +1,136 @@
+{
+  "protocole": {
+    "split": "inter-patient DS1/DS2 (de Chazal)",
+    "records_stimules_exclus": [
+      "102",
+      "104",
+      "107",
+      "217"
+    ],
+    "patients_train": [
+      "106",
+      "108",
+      "109",
+      "112",
+      "115",
+      "116",
+      "118",
+      "119",
+      "122",
+      "124",
+      "203",
+      "205",
+      "207",
+      "208",
+      "215",
+      "220",
+      "230"
+    ],
+    "patients_validation": [
+      "101",
+      "114",
+      "201",
+      "209",
+      "223"
+    ],
+    "patients_test": [
+      "100",
+      "103",
+      "105",
+      "111",
+      "113",
+      "117",
+      "121",
+      "123",
+      "200",
+      "202",
+      "210",
+      "212",
+      "213",
+      "214",
+      "219",
+      "221",
+      "222",
+      "228",
+      "231",
+      "232",
+      "233",
+      "234"
+    ],
+    "adaptation_patient": true,
+    "secondes_adaptation_par_patient": 300,
+    "battements_test": 41499
+  },
+  "modele": "PROPOSED",
+  "seeds": [
+    42,
+    1337,
+    2024,
+    7,
+    99
+  ],
+  "metriques_test": {
+    "Accuracy": 0.980650136147859,
+    "Balanced_Acc": 0.858848791352496,
+    "F1_macro": 0.8812162670987433,
+    "MCC_macro": 0.8643048371303182,
+    "Kappa": 0.905168609349553,
+    "AUC_macro": 0.9905955104284261,
+    "AP_macro": 0.9250488859242092,
+    "Brier": 0.030777396634221077,
+    "ECE": 0.014701537618970577,
+    "MCE": 0.19384649821690147,
+    "Se_S": 0.7922885572139303,
+    "PP_S": 0.8756013745704467,
+    "F1_S": 0.831864185439112,
+    "Se_V": 0.9892032762472077,
+    "PP_V": 0.8907140462621522,
+    "F1_V": 0.9373787264067737,
+    "Se_F": 0.6631944444444444,
+    "PP_F": 0.9009433962264151,
+    "F1_F": 0.764,
+    "Cout_clinique_total": 2506.0,
+    "Cout_moyen_par_battement": 0.06038699727704282
+  },
+  "f1_macro_ic95_par_patient": {
+    "mean": 0.7691787448029632,
+    "ci95_low": 0.5566182461789739,
+    "ci95_high": 0.915703025294499
+  },
+  "calibration": {
+    "methode": "vector_scaling",
+    "w": [
+      1.6997,
+      2.2851,
+      2.8637,
+      3.0759
+    ],
+    "b": [
+      0.8194,
+      -0.8669,
+      1.6929,
+      -1.4659
+    ],
+    "nll_validation": 0.16768,
+    "nll_sans_calibration": 0.69779,
+    "nll_temperature": 0.39536,
+    "nll_vector": 0.16768,
+    "temperature": 0.5
+  },
+  "temperature": 0.5,
+  "seuils_cliniques": {
+    "S": 0.02595125138759613,
+    "V": 0.23471310287714023
+  },
+  "option_de_rejet_99pct": {
+    "couverture": 0.9753969975180125,
+    "taux_renvoi": 0.024603002481987546,
+    "exactitude_atteinte": 0.9900192697267651
+  },
+  "alarmes_par_heure_par_battement": 35.432405233143236,
+  "alarmes_par_heure_declenchement": 2.6085206306608515,
+  "sensibilite_alarme": 0.9646017699115044,
+  "vpp_alarme": 0.8195488721804511,
+  "validation_externe": null,
+  "duree_totale_min": 0.9
+}

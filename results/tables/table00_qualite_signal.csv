@@ -1,0 +1,11 @@
+Ensemble,Classe,Battements,NaN/Inf,Plats,Satures,Bruit_HF,kSQI_faible,Rejetes,Taux_rejet_%
+train,N,35874,0,0,0,1,9,10,0.03
+train,S,345,0,0,0,0,0,0,0.0
+train,V,3073,0,0,0,0,31,31,1.01
+train,F,394,0,0,0,0,0,0,0.0
+train,TOTAL,39686,0,0,0,1,40,41,0.1
+"test (rapporte, non filtre)",N,36917,0,0,0,0,13,13,0.04
+"test (rapporte, non filtre)",S,1608,0,0,0,0,2,2,0.12
+"test (rapporte, non filtre)",V,2686,0,0,0,0,1,1,0.04
+"test (rapporte, non filtre)",F,288,0,0,0,0,0,0,0.0
+"test (rapporte, non filtre)",TOTAL,41499,0,0,0,0,16,16,0.04
